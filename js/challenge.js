@@ -10,15 +10,14 @@ const fetchVar = document.querySelector("#fetch");
             const email = json.results[0].email;
             const pic = json.results[0].picture.thumbnail;
 
-            var tag = document.createElement("p");
+            const tag = document.createElement("p");
             const fullNameAndEmail = document.createTextNode(`User: ${fullName} `+` Email: ${email}`);
             tag.appendChild(fullNameAndEmail);
-            var element = document.getElementById("person-container");
+            const element = document.getElementById("person-container");
             element.appendChild(tag);
 
-            var img = document.createElement('img');
+            const img = document.createElement('img');
             img.src = json.results[0].picture.thumbnail;
-            var element = document.getElementById("person-container");
             element.appendChild(img);
                     
         })
